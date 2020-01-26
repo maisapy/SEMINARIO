@@ -1,0 +1,11 @@
+h1, h2 {
+  font-family: Lato;
+}
+
+.metadato{
+  font-family: "Courier New";
+  border-style: dotted;
+  background-color:azure;
+  margin-left: 40px;
+  margin-right: 80px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Visualización de datos del Titanic</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: black;
+            color: floralwhite;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Supervivientes del Titanic </h1>
+    <h4 class="main-autor">Nombre: Raul Reyero</h3>
+    <h4 class="main-url">Url: <a href="https://js-aauhmw-titanic.stackblitz.io/">https://js-aauhmw-titanic.stackblitz.io/</a></h3>
+    <h4 class="main-fuente">Fuente: <a href="https://www.kaggle.com/francksylla/titanic-machine-learning-from-disaster/data">https://www.kaggle.com/francksylla/titanic-machine-learning-from-disaster/data</a></h3>
+    <h4 class="main-fecha">Fecha: 2/4/2019</h4>
+    <br>
+    <br>
+
+    <!-- add intro text to the page body -->
+    <div class="summary">
+        <h2 class="text-title">Resumen</h2>
+        <div class="text">
+El objetivo de este proyecto es crear visualizaciones efectivas del conjunto de datos Titanic que contiene una muestra de 1309 pasajeros pasajeros con datos como la clase del pasaje, sexo, edad, si sobrevió o no (0: falleció y 1: sobrevivió) entre otros.
+<br>
+<br>
+
+La historia que me gustaría transmitir es que las mujeres y el nivel socioeconómico más alto (1ª y 2ª clase) sobrevivieron con mayor probabilidad al desastre del Titanic que los hombres con pasaje de 3ª clase. Los grupos de mujeres de 1ª y 2ª clase tuvieron una tasa de supervivencia superior al 92%. Esto fue mucho mayor que la tasa de supervivencia promedio de la muestra, que fue del 38%.
+            <div class="metadato  " >
+              La audiencia es el público en general y especialmente los alumnos de la asignatura de Visualización de datos. El objetivo consiste es realizar un ejemplo sobre un pequeño trabajo práctico de visualización de datos aplicacando algunas técnicas y herramientas aprendidas durante la asignatura.
+              
+
+            </div>
+
+
+            </br>
+            </br>
+            </br>
+        </div>
+    </div>
+
+    <!-- add data visualization -->
+    <div class="plot">
+        <!-- The first bar chart -->
+        <h2 class="plot-title">Hombres y mujeres del pasaje</h2>
+        <div class="text">
+          Uso el tipo de gráfico circular o de tarta para representar las proporciones entre mujeres/hombres y cada una de las 3 categorias. Este tipo de gráfico es adecuado en este caso para representar proporciones en las que no es importante la precisión. Tambien podría haber utilizado gráficos de barras. <br>
+          Se han utilizado la herramienta tableau online para los gráficos de barras y circulares.
+
+        </div>  
+
+        <div id="plotContainer1">
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/NL0HDs1/Titanic4.png" alt="Titanic4" border="0"></a>
+        </div>
+        
+          <h2 class="plot-title">Categorías del pasaje</h2>
+        <div id="plotContainer2">
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Z11BTL2/Titanic5.png" alt="Titanic5" border="0"></a>
+        </div>
+
+
+
+        <h2 class="plot-title">SUPERVIVENCIA DENTRO DE CADA GRUPO</h2>
+        <div class="text">
+          En esta representación ya incluimos la variable supervivencia que es la clave de nuestro análisis. Mediante gráficos de barras apiladas ya podemos anticipar como la supervivencia de los pasajeros no parece aleatoria sino que parece depender tanto del sexo del pasajero como de la categoria del pasaje.
+          Podría haber utilizado gráficos circulares o de tarta como en el caso anterior pero en este caso para las categorías  los valores de los supervivientes están próximos.
+        </div> 
+
+        <div id="plotContainer3">
+        <a href="https://ibb.co/swp6Pcs"><img src="https://i.ibb.co/J7Wyd8r/Supervivientes-por-Grupos.png" alt="Supervivientes-por-Grupos" border="0"></a>
+        </div>
+        
+        
+        </br>
+        </br>
+
+        <!-- The second bar chart -->
+        <h2 class="plot-title">Supervivientes</h2>
+        <div id="plotContainer4">
+          <div class="text">
+              Finalmente tratamos de representar en un mismo gráfico el cruce de las dos variables cualitativas(sexo y pasaje) que nos interesa analizar sobre la varialible cantidad de supervivientes o fallecidos(variable cuantitativa). 
+               
+          </div>
+<br>
+ <a href="https://imgbb.com/"><img src="https://i.ibb.co/fpg1ZT2/screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-29-41.png" alt="screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-29-41" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
+ 
+ <a href="https://imgbb.com/"><img src="https://i.ibb.co/L1DZRsp/screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-32-07.png" alt="screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-32-07" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
+<br>
+<a href="https://ibb.co/Dt23NTN"><img src="https://i.ibb.co/CzGxqDq/Titanic3.png" alt="Titanic3" border="0"></a>
+
+
+
+        </div>
+<!-- add outro text to the page body -->
+    <div class="Interpretation">
+        <h2 class="text-title">Interpretation</h2>
+        <div class="text">
+            <p>Teniendo en cuenta que las mujeres eran del 35%(466/1309) y las mujeres de 1ª y 2ª clase representan solo el 24%( (139+94)/1309) del tamaño total de la muestra, se evidencia que las personas que se pusieron en botes salvavidas no se tomaron al azar, sino de forma selectiva. La visualización de gráficos cirulares combinados muestra que las características de ser mujer y pertenecer a las clases más altas(1ª y 2ª) eran las principales prioridades para colocarse en botes salvavidas.</p>
+            </br>
+        </div>
+    </div>
+
+     <div id="plotContainer5">   
+<a href="https://ibb.co/ZhbN85p"><img src="https://i.ibb.co/JzSC7Vw/Supervivientes-por-Grupos2.png" alt="Supervivientes-por-Grupos2" border="0"></a>
+</div>
+
+        </br>
+        </br>
+        </br>
+    </div>
+
+    
+</body>
+</html>
