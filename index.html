@@ -63,7 +63,7 @@ El objetivo de este proyecto es crear visualizaciones efectivas del conjunto de 
 <br>
 En este documento se intenta demostrar que existe un patrón de comportamiento relacionado a los días, meses y horas del año, para ello se ha tomado tres años de datos, del 2017 al 2019, y se ha realizado una serie de representaciones que nos permiten visualizar y comparar estos patrones a lo largo del tiempo.<br></br>
             <div class="metadato  " >
-              La audiencia es el público en general y las fuerzas de seguridad de la ciudad, se pretende proveer una herramienta que ayude a distribuir de forma eficiente el personal de seguridad en determinados periodos de tiempo donde se identificar que hay un aumento considerable en los incidentes criminales. 
+              La audiencia es el público en general y las fuerzas de seguridad de la ciudad, se pretende proveer una herramienta que ayude a distribuir de forma eficiente al personal de seguridad en determinados periodos de tiempo, en el que se identifica que hay un aumento considerable de los incidentes criminales. 
               
             </div>
             </br>
@@ -77,7 +77,7 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <!-- The first bar chart -->
         <h2 class="plot-title">Total de incidentes por año</h2>
         <div class="text">
-          Uso el tipo de gráfico de barra para representar la cantidad de incidentes en 3 años, de esta forma puedo ver que el número de casos totales ha sido muy similar. <br>
+          Usamos el tipo de gráfico de barra para representar la cantidad de incidentes en 3 años, de esta forma podemos ver que el número de casos totales ha sido muy similar. <br>
           Se ha utilizado la herramienta Chart de la hoja de cálculo de Google Sheet para desarrollar los gráficos de barras de este y el siguiente apartado.
           </br>
         </div>  
@@ -102,11 +102,11 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
           En este gráfico visualizamos la cantidad de incidentes que ocurren por mes a lo largo de todo un año, la comparación toma los 3 años sobre los que estamos haciendo el análisis, cada línea representa un año, y como se puede observar el comportamiento es muy parecido en cada año, teniendo el pico más bajo en febrero y el más alto en agosto.
           </br>
           <br>
-          El gráfico de linea usamos en este caso ya que es más fácil reflejar la tendencia en el trascurso del tiempo.
+          Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
           La herramienta utilizada es Python con la libreria SEABORN.
          </br>
          <br>
-          Cómo se desarrollo el gráfico y los datos utilizados se puede ver en este link: 
+          Cómo se desarrollo el gráfico y los datos utilizados se pueden ver en este link: 
           <a href="https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46">https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46</a>
          </br>
         </div> 
@@ -126,10 +126,10 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
               En este gráfico incluimos la variable de hora para ver si existe un comportamiento también asociado a las horas, hemos superpuesto los tres años para poder tener una comparación más completa y hemos abierto por meses para analizar si esto se mantiene igual en cada mes. 
               </br>
               <br>
-              De esta manera se puede observar que también existe un patrón asociado a las horas, vemos que hay menos incidentes en el lapso de las 4 y 5 de la madrugada y un pico muy alto entre las 16 y las 19 hs.  
+              De esta manera se puede observar que también existe un patrón asociado a las horas, vemos que hay menos incidentes en el lapso de las 4:00 AM y 5:00 AM y un pico muy alto entre las 4:00 PM y las 7 PM.  
               </br>
               <br>
-              El gráfico de linea usamos en este caso ya que es más fácil reflejar la tendencia en el trascurso del tiempo.
+              Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
               La herramienta utilizada es Python con la libreria SEABORN.
               </br>
               <br>
@@ -145,11 +145,11 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <div id="plotContainer5">
           <div class="text">
               <br>
-              En este gráfico revisamos las incidencias por día de la semana, comparando los datos de tres años, podemos ver que al igual que en los casos anteriores, también se puede establecer un patrón de comportamiento, siendo los domingos los días con menos cantidad de incidentes.
+              En este gráfico revisamos las incidencias por día de la semana, comparando los datos de tres años, podemos ver que al igual que en los casos anteriores, también se puede establecer un patrón de comportamiento, siendo los domingos los días con menos cantidad de incidentes y por el contario, los viernes tienen el pico más alto de casos.
               </br>              
               <br>
-              En este caso usamos un gráfico de barras para comparar las categorías y diferenciamos con colores los datos de cada año.
-              La herramienta utilizada es Python con la libreria BOKEH, que nos permite crear un gráfico interactivo.
+              Usamos un gráfico de barras para comparar las categorías y diferenciamos con colores los datos de cada año.
+              La herramienta utilizada es Python con la libreria BOKEH, esta opción nos permite crear un gráfico interactivo.
               </br>
               <br>
               Cómo se desarrollo el gráfico y los datos utilizados se pueden ver en este link: 
@@ -176,16 +176,20 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
       </div>
 <!-- add outro text to the page body -->
     <div class="Interpretation">
-        <h2 class="text-title">Interpretation</h2>
+        <h2 class="text-title">Interpretación</h2>
         <div class="text">
-            <p>Teniendo en cuenta que las mujeres eran del 35%(466/1309) y las mujeres de 1ª y 2ª clase representan solo el 24%( (139+94)/1309) del tamaño total de la muestra, se evidencia que las personas que se pusieron en botes salvavidas no se tomaron al azar, sino de forma selectiva. La visualización de gráficos cirulares combinados muestra que las características de ser mujer y pertenecer a las clases más altas(1ª y 2ª) eran las principales prioridades para colocarse en botes salvavidas.</p>
-            </br>
+          <br>
+            <p>Luego de la revisión de datos podemos concluir que los picos mas altos y bajos estan relacionados con los meses más frios y calurosos del año, siendo agosto el mes en que se dispara la cantidad de incidencias.
+          </br>    
+          <br>
+            Asi mismo vemos que los viernes son los días más críticos dentro de la semana, y hay que poner especial atención al bloque de las cuatro a las siete de la tarde, porque es el periodo en que aumenta la cantidad de hechos delictivos, estoy podrían coincidir con el horario de salida laboral.
+          </br>
+          <br>
+            Finalmente las fuerzas de seguridad deberían ser reforzadas en este periodo de tiempo, sobre el distrito A1, que es el que presenta la mayor densidad de hechos delictivos</p>
+          </br>
+           
         </div>
     </div>
-
-     <div id="plotContainer5">   
-<a href="https://ibb.co/ZhbN85p"><img src="https://i.ibb.co/JzSC7Vw/Supervivientes-por-Grupos2.png" alt="Supervivientes-por-Grupos2" border="0"></a>
-</div>
 
         </br>
         </br>
