@@ -9,3 +9,7 @@ h1, h2 {
   margin-left: 40px;
   margin-right: 80px;
 }
+#viz1,#viz2,#viz3{
+ width: 80%;
+ height: 300px;
+}

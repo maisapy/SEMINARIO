@@ -75,55 +75,90 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
     <!-- add data visualization -->
     <div class="plot">
         <!-- The first bar chart -->
-        <h2 class="plot-title">Distribución anual de datos</h2>
+        <h2 class="plot-title">Total de incidentes por año</h2>
         <div class="text">
-          Uso el tipo de gráfico de barra para representar la cantidad de incidentes en 3 años, de esta forma podemos ver que el número de casos totales ha sido muy similar. <br>
-          Se han utilizado la herramienta tableau online para los gráficos de barras y circulares.
-
+          Uso el tipo de gráfico de barra para representar la cantidad de incidentes en 3 años, de esta forma puedo ver que el número de casos totales ha sido muy similar. <br>
+          Se ha utilizado la herramienta Chart de la hoja de cálculo de Google Sheet para desarrollar los gráficos de barras de este y el siguiente apartado.
+          </br>
         </div>  
 
         <div id="plotContainer1">
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/NL0HDs1/Titanic4.png" alt="Titanic4" border="0"></a>
+<iframe width="628.3018867924528" height="388.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQIGRUxs4RCpaHhjPWiajh4AeJsR8GYvYHzW0g0w6niD4NkCZEXKpvFnZzLhNqObEGQDM6VA3gKaYDT/pubchart?oid=1728924435&amp;format=interactive"></iframe>
         </div>
         
-          <h2 class="plot-title">Categorías del pasaje</h2>
+          <h2 class="plot-title">Top de incidentes mas comúnes</h2>
+          <div class="text">
+          <br>Este gráfico pretende mostrar a que tipo de incidentes nos enfrentamos con más frecuencia, se espera que esta información junto con las demás ayude a establecer mejores estrategias de seguridad ciudadana.</br>
+          </div>  
         <div id="plotContainer2">
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/Z11BTL2/Titanic5.png" alt="Titanic5" border="0"></a>
+<iframe width="812.5" height="502.3958333333333" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQIGRUxs4RCpaHhjPWiajh4AeJsR8GYvYHzW0g0w6niD4NkCZEXKpvFnZzLhNqObEGQDM6VA3gKaYDT/pubchart?oid=1075327166&amp;format=interactive"></iframe>
         </div>
 
 
 
-        <h2 class="plot-title">SUPERVIVENCIA DENTRO DE CADA GRUPO</h2>
+        <h2 class="plot-title">Evolución de incidentes</h2>
         <div class="text">
-          En esta representación ya incluimos la variable supervivencia que es la clave de nuestro análisis. Mediante gráficos de barras apiladas ya podemos anticipar como la supervivencia de los pasajeros no parece aleatoria sino que parece depender tanto del sexo del pasajero como de la categoria del pasaje.
-          Podría haber utilizado gráficos circulares o de tarta como en el caso anterior pero en este caso para las categorías  los valores de los supervivientes están próximos.
+          <br>
+          En este gráfico visualizamos la cantidad de incidentes que ocurren por mes a lo largo de todo un año, la comparación toma los 3 años sobre los que estamos haciendo el análisis, cada línea representa un año, y como se puede observar el comportamiento es muy parecido en cada año, teniendo el pico más bajo en febrero y el más alto en agosto.
+          </br>
+          <br>
+          El gráfico de linea usamos en este caso ya que es más fácil reflejar la tendencia en el trascurso del tiempo.
+          La herramienta utilizada es Python con la libreria SEABORN.
+         </br>
+         <br>
+          Cómo se desarrollo el gráfico y los datos utilizados se puede ver en este link: 
+          <a href="https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46">https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46</a>
+         </br>
         </div> 
 
         <div id="plotContainer3">
-        <a href="https://ibb.co/swp6Pcs"><img src="https://i.ibb.co/J7Wyd8r/Supervivientes-por-Grupos.png" alt="Supervivientes-por-Grupos" border="0"></a>
+        <a href="https://ibb.co/fpTJ432"><img src="https://i.ibb.co/LtsKnT8/Incidentes-por-mes-y-a-o.jpg" alt="Incidentes-por-mes-y-a-o" border="0"></a>
         </div>
-        
         
         </br>
         </br>
 
         <!-- The second bar chart -->
-        <h2 class="plot-title">Supervivientes</h2>
+        <h2 class="plot-title">Incidentes por hora</h2>
         <div id="plotContainer4">
           <div class="text">
-              Finalmente tratamos de representar en un mismo gráfico el cruce de las dos variables cualitativas(sexo y pasaje) que nos interesa analizar sobre la varialible cantidad de supervivientes o fallecidos(variable cuantitativa). 
-               
+              <br>
+              En este gráfico incluimos la variable de hora para ver si existe un comportamiento también asociado a las horas, hemos superpuesto los tres años para poder tener una comparación más completa y hemos abierto por meses para analizar si esto se mantiene igual en cada mes. 
+              </br>
+              <br>
+              De esta manera se puede observar que también existe un patrón asociado a las horas, vemos que hay menos incidentes en el lapso de las 4 y 5 de la madrugada y un pico muy alto entre las 16 y las 19 hs.  
+              </br>
+              <br>
+              El gráfico de linea usamos en este caso ya que es más fácil reflejar la tendencia en el trascurso del tiempo.
+              La herramienta utilizada es Python con la libreria SEABORN.
+              </br>
+              <br>
+              Cómo se desarrollo el gráfico y los datos utilizados se puede ver en este link: 
+               <a href="https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46">https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46</a>
+              </br>               
           </div>
-<br>
- <a href="https://imgbb.com/"><img src="https://i.ibb.co/fpg1ZT2/screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-29-41.png" alt="screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-29-41" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
- 
- <a href="https://imgbb.com/"><img src="https://i.ibb.co/L1DZRsp/screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-32-07.png" alt="screenshot-eu-west-1a-online-tableau-com-2019-04-02-14-32-07" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
-<br>
-<a href="https://ibb.co/Dt23NTN"><img src="https://i.ibb.co/CzGxqDq/Titanic3.png" alt="Titanic3" border="0"></a>
+          <br>
+            <a href="https://ibb.co/L9NxmCp"><img src="https://i.ibb.co/1Rzr192/Incidentes-por-hora-mes-a-o.png" alt="Incidentes-por-hora-mes-a-o" border="0"></a></br>
+      </div>
 
-
-
-        </div>
+        <h2 class="plot-title">Incidentes por día de la semana</h2>
+        <div id="plotContainer5">
+          <div class="text">
+              <br>
+              En este gráfico revisamos las incidencias por día de la semana, comparando los datos de tres años, podemos ver que al igual que en los casos anteriores, también se puede establecer un patrón de comportamiento, siendo los domingos los días con menos cantidad de incidentes.
+              </br>              
+              <br>
+              En este caso usamos un gráfico de barras para comparar las catagorias y diferenciamos con colores los datos de cada año.
+              La herramienta utilizada es Python con la libreria BOKEH, que nos permite crear un gráfico interactivo.
+              </br>
+              <br>
+              Cómo se desarrollo el gráfico y los datos utilizados se puede ver en este link: 
+               <a href="https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46">https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46</a>
+              </br>               
+          </div>
+          <br>
+            <a href="https://ibb.co/P992Nzc"><img src="https://i.ibb.co/8ddy04r/Incidentes-por-dia-de-la-semana.jpg" alt="Incidentes-por-dia-de-la-semana" border="0"></a></br>
+      </div>
 <!-- add outro text to the page body -->
     <div class="Interpretation">
         <h2 class="text-title">Interpretation</h2>
